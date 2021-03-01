@@ -1,7 +1,8 @@
 # BooksTrade
 A web app in progress for learning purpose.
+LIVE LINK : [BookTradeApp](https://book-trade-abhishek.herokuapp.com/users)
 ## Build on tech:
-- NodeJS, ReactJS, Meteor
+- Meteor, NodeJS, ReactJS, MongoDB
 
 ## Features
 - Login Logout
@@ -10,6 +11,10 @@ A web app in progress for learning purpose.
 - let you trade books with other users
 
 ## commands
-`npm install`
-`meteor`
+```bash
+npm install
+```
+```bash
+meteor
+```
 
