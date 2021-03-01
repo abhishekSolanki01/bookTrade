@@ -9,3 +9,7 @@ A web app in progress for learning purpose.
 - Let you upload your books list 
 - let you trade books with other users
 
+## commands
+`npm install`
+`meteor`
+
