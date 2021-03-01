@@ -21,7 +21,7 @@ export const routes = (
                 <Route path="/login" component={Login}/>
                 <Route path="/signup" component={Signup}/>
                 {/* <Route path="/books/my" component={AddBooks} /> */}
-                <Route path="/books" component={App}/>
+                <Route path="/" component={App}/>
                 <Route path="/users/edit" component={EditProfie}/>
                 <Route path="/users/profile" component={Profile}/>
                 <Route path="/users" component={Users}></Route>
