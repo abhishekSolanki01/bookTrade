@@ -1,6 +1,6 @@
 # BooksTrade
 A web app in progress for learning purpose.
-LIVE LINK : [BookTradeApp](https://book-trade-abhishek.herokuapp.com/users)
+LIVE LINK : [BookTradeApp](https://book-trade-abhishek.herokuapp.com)
 ## Build on tech:
 - Meteor, NodeJS, ReactJS, MongoDB
 
