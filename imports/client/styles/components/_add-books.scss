@@ -1,0 +1,59 @@
+.add-books{
+    
+}
+
+.add-books-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
+.add-books-container__left{
+    float: left;
+    width: 75%;
+    border-right: 2px solid black;
+    
+    input{
+        background: transparent;
+        border-top: 2px solid black;
+        width:96%;
+        height: 5rem;
+        padding-left: 2rem;
+    }
+}
+
+.add-books-container__right{
+    height: 10%;
+    width: 25%;
+    align-items:baseline;
+    justify-content:baseline;
+    text-overflow:clip;
+}
+
+.book-image{
+    background-color: rgb(77, 2, 77);
+    height: 13rem;
+    text-align: center;
+}
+.icon{
+    //font-size: 15rem;
+    //color: rgb(185, 185, 185);
+    color: black;
+}
+
+.upload-book-image{
+    background-color:rgb(77, 2, 77);
+    color: black;
+}
+
+.add-books-container__bottom{
+    display: block;
+    button{
+        margin:0;
+    }
+}
+
+.my-books{
+    margin-top: 0;
+}

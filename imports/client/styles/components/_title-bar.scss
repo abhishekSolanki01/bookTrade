@@ -1,0 +1,22 @@
+.title-bar {
+    background: #010108;
+    color: rgb(226, 200, 226);
+    color: whitesmoke;
+}
+
+.title-bar-content{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-wrapper{
+    margin: 0;
+    margin-left: 5rem;
+    max-width: 15rem;
+    padding: 1.3rem
+}
+
+
+@import './navbar';
+@import './user-name';

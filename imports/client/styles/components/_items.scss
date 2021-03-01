@@ -1,0 +1,72 @@
+.book-info{
+    background: transparent;
+    border: 2px solid black;
+    margin-bottom: 1.3rem;
+    padding: 1.3rem;
+}
+.book-info-content{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.book-info-content-t-a{
+    h3{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(151, 148, 151);
+    }
+    h5{
+        font-style: oblique;
+        font-family:'Courier New', Courier, monospace;
+        color: black;
+    }
+}
+.book-info-content-cross{
+    .button{
+        background: transparent;
+        border: 1px solid #010108;
+        &:hover, &:focus {
+            background:#010108;
+            color: white;
+        }
+        &:active{
+            background: #ccc;
+            color: black;
+            transform: scale(1.1);
+        }
+
+    }
+
+}
+
+.item-btn-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.item-button-purple{
+    background-color: rgb(77, 2, 77);
+    border: 2px solid #010108;
+    text-decoration: none;
+}
+
+.item-button-ghost{
+    background-color: transparent;
+    border: 2px solid #010108;
+    text-decoration: none;
+}
+
+
+.item {
+    display: flex;
+    background: white;
+    border: 1px solid #e8e8e8;
+    margin-bottom: 1.3rem;
+    padding: 1.3rem;
+}
+
+
+// .item__message {
+     
+// }
+
+//B E M --> BLOCK(item), ELEMENT(.item__message) MODIFIER(.item__message--empty)

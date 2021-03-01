@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  html{
+    font-size: 62.5%;
+  }
+  
+  body {
+    background:#010108c9;
+    // #f2f2f2;
+    color: #555;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 1.6rem;
+  }
+
+  input, button, select {
+      font-size: 1.3rem;
+  }
+  
+  h1 {
+    font-weight: 300;
+    font-size: 2.4rem;
+  }
+  input{
+    outline:none;
+    border: none;
+  }
+  
+
+  
+
+
+
+
+
+@import './components/title-bar';
+@import './components/wrapper';
+@import './components/items';
+@import './components/button';
+@import './components/navbar';
+@import './components/info-abt-page';
+@import './components/profile-page';
+@import './components/add-books';

@@ -1,0 +1,32 @@
+.button {
+    background:#05030f93 #010108;
+    //border: 1px solid #555;
+    color: black;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 1.3rem ;
+    outline: none;
+    padding: 1.3rem;
+    transition: background .3s ease, transform .3s ease, color .3s ease ;
+
+    &:hover, &:focus {
+        background:#010108;
+        color: white;
+    }
+    &:active{
+        background: #ccc;
+        color: black;
+        transform: scale(1.1);
+    }
+}
+
+.button--round{
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+}
+
+.save-btn{
+    display: flex;
+    float: right;
+}
