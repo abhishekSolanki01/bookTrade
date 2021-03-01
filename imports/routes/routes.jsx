@@ -1,6 +1,8 @@
 import React from "react";
+import { Meteor } from 'meteor/meteor'
 import {
     BrowserRouter as Router,
+    Redirect,
     Switch,
     Route,
     Link
@@ -15,17 +17,32 @@ import EditProfie from "../ui/EditProfile";
 import AddBooks from "../ui/AddBooks";
 
 export const routes = (
-    
-        <Router>
-            <Switch>
-                <Route path="/login" component={Login}/>
-                <Route path="/signup" component={Signup}/>
-                {/* <Route path="/books/my" component={AddBooks} /> */}
-                <Route path="/" component={App}/>
-                <Route path="/users/edit" component={EditProfie}/>
-                <Route path="/users/profile" component={Profile}/>
-                <Route path="/users" component={Users}></Route>
-            </Switch>
-        </Router>
-            
+
+    <Router>
+        <Switch>
+            <Route path="/login" render={() => (
+                Meteor.userId() ? (<Redirect to="/" />) : (<Login />)
+            )}/>
+            <Route path="/signup" render={() => (
+                Meteor.userId() ? (<Redirect to="/" />) : (<Signup />)
+            )}/>
+
+            <Route path="/books/my"
+                render={()=>(!Meteor.userId() ? (<Redirect to="/"/>) : (<AddBooks/>) )}
+            />
+
+            <Route path="/users/edit" 
+                render={()=>(!Meteor.userId() ? (<Redirect to="/"/>) : (<EditProfie/>) )}
+            />
+
+            <Route path="/users/profile" 
+              render={()=>(!Meteor.userId() ? (<Redirect to ="/"/>) : (<Profile/>))}
+            />
+
+            <Route path="/users" component={Users}></Route>
+
+            <Route path="/" component={App} />
+        </Switch>
+    </Router>
+
 )

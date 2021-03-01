@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
   }
   html{
     font-size: 62.5%;
@@ -42,3 +43,4 @@
 @import './components/info-abt-page';
 @import './components/profile-page';
 @import './components/add-books';
+@import './components/login';

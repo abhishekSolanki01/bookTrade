@@ -40,11 +40,11 @@ export default class UserName extends React.Component{
             return (
                 <div className="user-name-to-center">
                     <div className="user-name"> <span>{this.state.name || Accounts.userId()}</span>
-                            <div className="user-name-dropdown">
-                                <span onClick={this.onLogout.bind(this)}>Logout</span><hr/>
-                                <span><Link to ="/users/profile">Profile</Link></span><hr/>
-                                <span ><Link to="#">All Requests</Link></span><hr/>
-                                <span ><Link to="#">Createvghgvhgghfhgfhgfh Request</Link></span>                         
+                            <div className="user-name-dropdown">                    
+                                <Link to ="/users/profile"><span>Profile</span></Link><hr/>
+                                <Link to="/users/edit"><span >Edit Profile</span></Link><hr/>
+                                <Link to="/books/my"><span >My Books</span></Link><hr/> 
+                                <span onClick={this.onLogout.bind(this)}>Logout</span>                  
                             </div>
                     </div>                   
                 </div>

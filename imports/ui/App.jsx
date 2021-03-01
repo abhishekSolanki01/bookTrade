@@ -35,7 +35,7 @@ export default class App extends React.Component{
           </div>
           } 
           {!Meteor.userId() &&
-            <button>Login to Add books</button>
+            <Link to="/login" className="item-button-purple button btn-center">Login to add Books</Link>
           }
         </div>
 

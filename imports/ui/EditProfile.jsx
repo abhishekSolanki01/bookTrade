@@ -1,8 +1,12 @@
 import React from 'react';
+import FlipMove from 'react-flip-move';
 import { Tracker } from 'meteor/tracker'
 import { Accounts } from 'meteor/accounts-base'
 
 import TitleBar from './TitleBar'
+import { Link } from 'react-router-dom';
+
+//let history = useHistory();
 
 export default class EditProfie extends React.Component {
     constructor(props) {
@@ -12,10 +16,12 @@ export default class EditProfie extends React.Component {
             city: "",
             state: "",
             address: "",
-            email: ""
+            email: "",
+            message: null
         }
         this.onSubmit = this.onSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.saveChangemessage= this.saveChangemessage.bind(this);
     }
 
     componentDidMount() {
@@ -30,6 +36,7 @@ export default class EditProfie extends React.Component {
         })
     }
     componentWillUnmount() {
+        this.setState(() => ({message: null}))
         this.tracker.stop();
     }
 
@@ -64,6 +71,11 @@ export default class EditProfie extends React.Component {
         }
     }
 
+    saveChangemessage(){
+        const message = "Updated profile successfully!"
+        this.setState(() => ({message} ))
+    }
+
 
 
 
@@ -76,7 +88,14 @@ export default class EditProfie extends React.Component {
                         <h1>{this.state.name}'s Profile</h1>
                     </div>
                     <form onSubmit={this.onSubmit.bind(this)} className="profile-container">
-                        
+                    <FlipMove> 
+                    { this.state.message && 
+                        <div className="info-abt-page__message">
+                            {this.state.message}{" "}
+                            <Link className="link" to="/users/profile">go to profile</Link> 
+                        </div>
+                    }
+                    </FlipMove>
                         <div className="profile-container-element__left"><p>Name</p></div>
                         <input type="text"
                             required={true}
@@ -85,6 +104,7 @@ export default class EditProfie extends React.Component {
                             value={this.state.name} 
                             //placeholder="Name"
                             readOnly
+                            style={ {"cursor":"no-drop"} }
                             className="profile-container-element__right for-form"
                         />
 
@@ -94,6 +114,7 @@ export default class EditProfie extends React.Component {
                             value={this.state.email} 
                             name="email"
                             readOnly
+                            style={ {"cursor":"no-drop"} }
                             //placeholder="Email"
                             className="profile-container-element__right for-form"
                             readOnly
@@ -129,7 +150,13 @@ export default class EditProfie extends React.Component {
                             onChange={this.handleChange}
                             className="profile-container-element__right for-form"
                         />
-                        <button type="submit" className="item-button-purple button save-btn" >Save Changes</button>
+                        <button 
+                          type="submit" 
+                          className="item-button-purple button save-btn" 
+                          onClick={this.saveChangemessage}
+                        >
+                            Save Changes
+                        </button>
                     </form>
                 </div>
 

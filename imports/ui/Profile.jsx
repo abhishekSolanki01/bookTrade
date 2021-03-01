@@ -67,7 +67,7 @@ export default class Profile extends React.Component {
                             <Link to="/users/edit" className="profile-container-element__left__btn">
                                 <p> <span>Edit profile</span> </p>
                             </Link>
-                            <Link to="/users/edit" className="profile-container-element__right__btn">
+                            <Link to="/books/my" className="profile-container-element__right__btn">
                                 <p><span>{this.state.name}'s books</span> </p>
                             </Link>
                     
