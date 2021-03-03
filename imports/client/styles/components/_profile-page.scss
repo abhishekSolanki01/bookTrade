@@ -9,8 +9,8 @@
 .profile-container-element__left{
     display: flex;
     float: left;
-    width: 30%;
-    height: 5rem;
+    width: 25%;
+    height: 5.3rem;
     background: black;
     color: grey;
     justify-content:center;
@@ -20,6 +20,42 @@
     }
 
 }
+@media (min-width: 45rem) {
+    .profile-container-element__left{
+        display: flex;
+        float: left;
+        width: 30%;
+        height: 5rem;
+        background: black;
+        color: grey;
+        justify-content:center;
+        border-top: 0.2rem solid  rgb(77, 2, 77);
+        p{
+            margin-top: 2rem;
+        }
+    
+    }
+}
+
+
+
+
+.profile-container-element__right{
+    display: flex;
+    float: right;
+    width: 74%;
+    height: 5.3rem;
+    background: transparent;
+    color: black;
+    border-top: 0.2rem solid black;
+    p{
+        margin-top: 2.5rem;
+        margin-left: 1.3rem;
+    }
+}
+
+@media (min-width: 45rem) {
+    
 .profile-container-element__right{
     display: flex;
     float: right;
@@ -33,6 +69,10 @@
         margin-left: 1.3rem;
     }
 }
+}
+
+
+
 
 .for-form{
     width: 65%;
@@ -45,7 +85,7 @@
 .profile-container-element__right__btn{
     display: flex;
     float: right;
-    width: 69.4%;
+    width: 67.8%;
     height: 5rem;
     background: rgb(77, 2, 77);
     color: black;
@@ -78,7 +118,7 @@
 .profile-container-element__left__btn{
     display: flex;
     float: left;
-    width: 29.4%;
+    width: 29.3%;
     height: 5rem;
     background:rgb(77, 2, 77);
     color:black;

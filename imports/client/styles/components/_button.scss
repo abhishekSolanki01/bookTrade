@@ -36,3 +36,23 @@
     display: flex;
     justify-content: center;
 }
+
+.cross-btn-nav{
+    display: block;
+    height: 3rem;
+    line-height: 3rem;
+    width: 20%;
+    text-align: center;
+    margin-left: 55vw;
+    background: transparent;
+    border: 1px solid #010108;
+    &:hover, &:focus {
+        background:#010108;
+        color: white;
+    }
+    &:active{
+        background: #ccc;
+        color: black;
+        transform: scale(1.1);
+    }
+}

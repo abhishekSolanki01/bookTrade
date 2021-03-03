@@ -12,9 +12,18 @@
 
 .logo-wrapper{
     margin: 0;
-    margin-left: 5rem;
+    margin-left: 2rem;
     max-width: 15rem;
     padding: 1.3rem
+}
+
+@media (min-width: 45rem) {
+    .logo-wrapper{
+        margin: 0;
+        margin-left: 5rem;
+        max-width: 15rem;
+        padding: 1.3rem
+    }
 }
 
 
